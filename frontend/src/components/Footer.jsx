@@ -18,11 +18,18 @@ export default function Footer() {
           </p>
         </div>
         <div>
-          <h4>📍 Fréjus, Var</h4>
+          <h4>📍 Fréjus &amp; Saint-Raphaël</h4>
           <p>
             Séances à domicile, à La Villa Marie<br />
             (Fréjus) ou à la bibliothèque de<br />
             Saint-Raphaël. Paiement : CB ou chèque.
+          </p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>
+            📞 <a href="tel:+33650021565">06 50 02 15 65</a><br />
+            ✉️ raphaelmaury83600@gmail.com
           </p>
         </div>
         <div>

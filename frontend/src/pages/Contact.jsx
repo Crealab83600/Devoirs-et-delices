@@ -55,7 +55,7 @@ export default function Contact() {
             <h3>📍 Informations pratiques</h3>
             <ul className="note" style={{ paddingLeft: '1.2rem', marginTop: '0.5rem' }}>
               <li>📍 Fréjus (Var) : séances à domicile ou à la bibliothèque La Villa Marie ; le dimanche, à la bibliothèque de Saint-Raphaël.</li>
-              <li>📞 Téléphone : à compléter</li>
+              <li>📞 Téléphone : <a href="tel:+33650021565">06 50 02 15 65</a></li>
               <li>✉️ E-mail : <a href="mailto:raphaelmaury83600@gmail.com">raphaelmaury83600@gmail.com</a></li>
               <li>Séances du lundi au samedi, après l’école et le mercredi.</li>
               <li>💳 Paiement sur place : carte bancaire (terminal) ou chèque.</li>

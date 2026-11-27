@@ -3,6 +3,7 @@ import { matieres, durees, typesSeance } from '../data/matieres'
 import { niveaux } from '../data/tarifs'
 import { formaterDate } from '../data/disponibilites'
 import { useApp } from '../context/AppContext'
+import AdminGate from './AdminGate'
 
 const badges = {
   'en attente': 'badge-attente',
@@ -68,6 +69,7 @@ export default function Admin() {
   }
 
   return (
+    <AdminGate>
     <div className="page container">
       <div className="entete-page">
         <h1>⚙️ Administration</h1>
@@ -351,5 +353,6 @@ export default function Admin() {
         </div>
       )}
     </div>
+    </AdminGate>
   )
 }

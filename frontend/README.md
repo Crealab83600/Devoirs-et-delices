@@ -64,6 +64,17 @@ L'application est une démonstration complète côté client : les données (él
 - Typographies arrondies : Baloo 2 (titres) et Quicksand (texte)
 - Ambiance chaleureuse, élégante et familiale ; logo : livre ouvert + gâteau
 
-## Sécurité alimentaire
+## Hébergement
+
+Le site est déployé sur GitHub Pages (build à la racine du dépôt). La configuration pour deux hébergeurs alternatifs plus robustes est incluse :
+
+- **Netlify** : `netlify.toml` à la racine — sur app.netlify.com, « Add new site → Import an existing project », choisir le dépôt GitHub : build et publication automatiques.
+- **Vercel** : `vercel.json` à la racine — sur vercel.com, « Add New → Project », choisir le dépôt, définir « Root Directory » sur `frontend`.
+
+Les deux offrent HTTPS, déploiement automatique à chaque commit sur `main` et un CDN plus rapide que GitHub Pages.
+
+## Sécurité de l'Administration
+
+La page `/admin` est protégée par un code d'accès (`frontend/src/admin/code.js`, à modifier). C'est un premier filtre pour les visiteurs : sur un site 100 % statique, ce code est présent dans le code source téléchargé par le navigateur. Une protection réelle (comptes, mots de passe chiffrés, sessions) nécessite un backend — indispensable également si un jour les paiements passent en ligne.
 
 Les allergènes sont affichés sur chaque fiche produit et rappelés dans la boutique, le pied de page et le formulaire de contact. Avant une vente régulière, consultez les règles d'étiquetage alimentaire et de déclaration d'activité sur economie.gouv.fr, et faites valider les conditions de l'activité par un adulte responsable.
