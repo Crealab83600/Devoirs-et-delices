@@ -75,7 +75,8 @@ export const conditionsForfaits = [
 ]
 
 export const moyensPaiement = [
-  'Paiement uniquement par carte bancaire, sur place, avec terminal de paiement.',
+  'Carte bancaire sur place, avec terminal de paiement.',
+  'Chèque accepté.',
   'Le règlement se fait à la fin de la séance (et à la récupération des gourmandises).',
   'Aucune coordonnée bancaire ne circule sur ce site ni n’est stockée en ligne : le paiement est 100 % en personne.',
 ]
@@ -83,6 +84,29 @@ export const moyensPaiement = [
 export const lieux = [
   { id: 'domicile', nom: 'À domicile', emoji: '🏠', detail: 'Chez vous, à Fréjus et communes alentour.' },
   { id: 'villa-marie', nom: 'Bibliothèque La Villa Marie (Fréjus)', emoji: '🏛️', detail: 'Dans l’espace de travail de la bibliothèque, idéal pour les petits groupes.' },
+  { id: 'saint-raphael', nom: 'Bibliothèque de Saint-Raphaël', emoji: '📚', detail: 'Le dimanche de 13h30 à 17h30, uniquement à la bibliothèque de Saint-Raphaël.' },
+]
+
+export const reperesTarifaires = [
+  {
+    titre: 'Particuliers / étudiants (en ligne ou à domicile)',
+    texte: 'Généralement 14 € à 22 €/h, soit environ 14–20 € en primaire et 16–22 € au collège/lycée.',
+  },
+  {
+    titre: 'Organismes et cours à domicile déclarés',
+    texte: 'Souvent 25 € à 45 €/h avant avantage fiscal, selon le niveau et le format (individuel ou petit groupe).',
+  },
+  {
+    titre: 'Emploi direct via CESU',
+    texte: 'Salaires nets minimums conventionnels de 11,93 €/h (primaire) et 12,20 €/h (collège/lycée), congés payés inclus, auxquels s’ajoutent les cotisations et éventuelles aides.',
+  },
+]
+
+export const facteursPrix = [
+  'Le niveau scolaire et les matières : le primaire coûte moins cher que le lycée ou les matières scientifiques/spécialisées.',
+  'Le profil de l’intervenant : un étudiant ou intervenant débutant facture généralement moins qu’un enseignant expérimenté ou certifié.',
+  'Le format et la zone géographique : les tarifs peuvent être plus élevés dans les zones touristiques ou tendues (littoral varois / Côte d’Azur).',
+  'Le crédit d’impôt : pour les prestations éligibles de soutien scolaire à domicile, un crédit d’impôt de 50 % réduit de moitié le coût net (dans les plafonds légaux en vigueur).',
 ]
 
 export const prixSeance = (typeSeance, niveau, dureeId) => {

@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { matieres, durees, typesSeance } from '../data/matieres'
 import { niveaux, prixSeance } from '../data/tarifs'
-import { formaterDate } from '../data/disponibilites'
+import { formaterDate, LIEU_SAINT_RAPHAEL } from '../data/disponibilites'
 import { useApp } from '../context/AppContext'
 
 export default function Reserver() {
@@ -43,7 +43,7 @@ export default function Reserver() {
     if (!creneauId) return
     reserver({ matiereId, dureeId, niveau, typeSeance, creneauId, objectif })
     setConfirmation(
-      `Votre demande de réservation (${matiere.nom}, ${type.label.toLowerCase()}, niveau ${niveau}, ${duree.label}, le ${formaterDate(creneau.date)} à ${creneau.heure}) a bien été envoyée. Elle sera confirmée très vite !`,
+      `Votre demande de réservation (${matiere.nom}, ${type.label.toLowerCase()}, niveau ${niveau}, ${duree.label}, le ${formaterDate(creneau.date)} à ${creneau.heure}, ${creneau.lieu}) a bien été envoyée. Elle sera confirmée très vite !`,
     )
     setCreneauId('')
     setObjectif('')
@@ -127,7 +127,7 @@ export default function Reserver() {
           </div>
 
           <p className="prix-total">Total de la séance : {prix} €</p>
-          <p className="note">💳 Paiement sur place, uniquement par carte bancaire (terminal de paiement).</p>
+          <p className="note">💳 Paiement sur place : carte bancaire (terminal) ou chèque.</p>
           <button className="btn btn-primaire" style={{ marginTop: '1rem' }} disabled={!creneauId}>
             Envoyer la demande de réservation
           </button>
@@ -154,7 +154,7 @@ export default function Reserver() {
                     >
                       <span className="date-label">🕐 {c.heure}</span>
                       <br />
-                      <span className="heure-label">{c.places} place{c.places > 1 ? 's' : ''}</span>
+                      <span className="heure-label">📍 {c.lieu === LIEU_SAINT_RAPHAEL ? 'Bibliothèque de Saint-Raphaël' : 'Fréjus (domicile ou La Villa Marie)'}</span>
                     </button>
                   ))}
                 </div>

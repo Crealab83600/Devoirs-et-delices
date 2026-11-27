@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { niveaux, grilleIndividuel, tarifGroupe, forfaits, offresCommerciales, conditionsForfaits, moyensPaiement, lieux } from '../data/tarifs'
+import { niveaux, grilleIndividuel, tarifGroupe, forfaits, offresCommerciales, conditionsForfaits, moyensPaiement, lieux, reperesTarifaires, facteursPrix } from '../data/tarifs'
 
 const euros = (n) => `${n} €`
 const labelDuree = (d) => (d === '1h' ? '1 heure' : d === '1h30' ? '1 h 30' : '2 heures')
@@ -86,6 +86,26 @@ export default function Tarifs() {
           <ul className="note" style={{ paddingLeft: '1.2rem', marginTop: '1rem' }}>
             {conditionsForfaits.map((c) => (
               <li key={c}>{c}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2 className="section-titre">📊 Repères tarifaires du marché</h2>
+        <div className="grille grille-2">
+          {reperesTarifaires.map((r) => (
+            <div key={r.titre} className="carte">
+              <h3>{r.titre}</h3>
+              <p className="note">{r.texte}</p>
+            </div>
+          ))}
+        </div>
+        <div className="carte" style={{ marginTop: '1.5rem' }}>
+          <h3>⚖️ Ce qui fait varier le prix</h3>
+          <ul className="note" style={{ paddingLeft: '1.2rem', marginTop: '0.5rem' }}>
+            {facteursPrix.map((f) => (
+              <li key={f}>{f}</li>
             ))}
           </ul>
         </div>

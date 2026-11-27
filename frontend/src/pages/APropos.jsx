@@ -51,7 +51,7 @@ export default function APropos() {
           <p className="note" style={{ marginTop: '0.5rem' }}>
             Votre professeur particulier : passionné de transmission, il accompagne les élèves du
             primaire au lycée dans toutes les matières principales, à domicile à Fréjus et alentours,
-            en petit groupe ou à la bibliothèque La Villa Marie.
+            en petit groupe, à la bibliothèque La Villa Marie ou à la bibliothèque de Saint-Raphaël.
           </p>
           <p className="note" style={{ marginTop: '0.5rem' }}>
             Côté pâtisserie : des recettes testées et approuvées par les élèves (le brownie fondant

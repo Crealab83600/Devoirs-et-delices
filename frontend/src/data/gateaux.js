@@ -56,5 +56,5 @@ export const reglesSanitaires = [
   'Les pâtisseries sont préparées dans une cuisine où tous les allergènes peuvent être présents (traces possibles) : signalez toute allergie avant de commander.',
   'Les gourmandises sont fabriquées le jour même ou la veille, conservées au frais et transportées dans des boîtes alimentaires fermées.',
   'Les boissons de la formule gourmandise sont sans alcool.',
-  'Paiement sur place, à la récupération, uniquement par carte bancaire avec terminal de paiement.',
+  'Paiement sur place, à la récupération : carte bancaire (terminal) ou chèque.',
 ]

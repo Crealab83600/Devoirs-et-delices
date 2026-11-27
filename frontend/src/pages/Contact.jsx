@@ -54,11 +54,11 @@ export default function Contact() {
           <div className="carte" style={{ marginBottom: '1.5rem' }}>
             <h3>📍 Informations pratiques</h3>
             <ul className="note" style={{ paddingLeft: '1.2rem', marginTop: '0.5rem' }}>
-              <li>📍 Fréjus (Var) : séances à domicile ou à la bibliothèque La Villa Marie.</li>
+              <li>📍 Fréjus (Var) : séances à domicile ou à la bibliothèque La Villa Marie ; le dimanche, à la bibliothèque de Saint-Raphaël.</li>
               <li>📞 Téléphone : à compléter</li>
-              <li>✉️ E-mail : contact@devoirs-et-delices.fr</li>
+              <li>✉️ E-mail : <a href="mailto:raphaelmaury83600@gmail.com">raphaelmaury83600@gmail.com</a></li>
               <li>Séances du lundi au samedi, après l’école et le mercredi.</li>
-              <li>💳 Paiement uniquement par carte bancaire, sur place avec terminal de paiement.</li>
+              <li>💳 Paiement sur place : carte bancaire (terminal) ou chèque.</li>
               <li>Gourmandises à récupérer à la fin de la séance.</li>
               <li>🔒 Aucune coordonnée bancaire ne circule sur ce site : le paiement se fait uniquement en personne.</li>
             </ul>

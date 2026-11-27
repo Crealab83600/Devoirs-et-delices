@@ -20,9 +20,9 @@ export default function Footer() {
         <div>
           <h4>📍 Fréjus, Var</h4>
           <p>
-            Séances à domicile, à la bibliothèque<br />
-            La Villa Marie.<br />
-            Paiement sur place, carte bancaire uniquement.
+            Séances à domicile, à La Villa Marie<br />
+            (Fréjus) ou à la bibliothèque de<br />
+            Saint-Raphaël. Paiement : CB ou chèque.
           </p>
         </div>
         <div>

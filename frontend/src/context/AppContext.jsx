@@ -63,6 +63,7 @@ export function AppProvider({ children }) {
                 creneauId,
                 date: creneau.date,
                 heure: creneau.heure,
+                lieu: creneau.lieu || 'Fréjus — domicile ou bibliothèque La Villa Marie',
                 objectif: objectif || '',
                 statut: 'en attente',
                 commentaire: '',

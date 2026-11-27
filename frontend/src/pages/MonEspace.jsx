@@ -73,6 +73,7 @@ export default function MonEspace() {
                     {r.typeSeance === 'groupe' ? '👥 Petit groupe' : '👨‍🏫 Individuel'}
                     {' '}· Niveau {niveaux.find((n) => n.id === r.niveau)?.label}
                   </p>
+                  {r.lieu && <p className="note">📍 {r.lieu}</p>}
                   {r.objectif && <p className="note">🎯 Objectif : {r.objectif}</p>}
                   {r.statut === 'confirmée' && (
                     <p className="note" style={{ marginTop: '0.5rem' }}>
