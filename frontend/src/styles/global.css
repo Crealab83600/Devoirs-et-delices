@@ -1,0 +1,579 @@
+:root {
+  --rose: #f2b8c6;
+  --rose-fonce: #d98ea0;
+  --rose-pale: #fbe4ea;
+  --creme: #fff8f0;
+  --creme-fonce: #f7ead9;
+  --chocolat: #5d4037;
+  --chocolat-fonce: #41272e;
+  --chocolat-clair: #8d6e63;
+  --vert: #6b9b6e;
+  --orange: #d98e3f;
+  --rouge: #c05c5c;
+  --ombre: 0 8px 24px rgba(93, 64, 55, 0.12);
+  --rayon: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', system-ui, sans-serif;
+  background: var(--creme);
+  color: var(--chocolat);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Baloo 2', 'Quicksand', sans-serif;
+  color: var(--chocolat-fonce);
+  line-height: 1.2;
+}
+
+a {
+  color: var(--rose-fonce);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.page {
+  padding: 2.5rem 0 4rem;
+  animation: apparition 0.35s ease;
+}
+
+@keyframes apparition {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+.entete-page {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.entete-page h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.entete-page p {
+  color: var(--chocolat-clair);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* ---------- boutons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn-primaire {
+  background: var(--rose-fonce);
+  color: #fff;
+  box-shadow: var(--ombre);
+}
+
+.btn-primaire:hover:not(:disabled) {
+  background: #cf7d90;
+  transform: translateY(-2px);
+}
+
+.btn-secondaire {
+  background: #fff;
+  color: var(--chocolat);
+  border: 2px solid var(--rose);
+}
+
+.btn-secondaire:hover:not(:disabled) {
+  background: var(--rose-pale);
+}
+
+.btn-choco {
+  background: var(--chocolat);
+  color: var(--creme);
+}
+
+.btn-choco:hover:not(:disabled) {
+  background: var(--chocolat-fonce);
+  transform: translateY(-2px);
+}
+
+.btn-petit {
+  font-size: 0.85rem;
+  padding: 0.35rem 0.9rem;
+}
+
+.btn-danger {
+  background: transparent;
+  color: var(--rouge);
+  border: 2px solid var(--rouge);
+}
+
+/* ---------- cartes ---------- */
+.carte {
+  background: #fff;
+  border-radius: var(--rayon);
+  box-shadow: var(--ombre);
+  padding: 1.5rem;
+}
+
+.grille {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.grille-2 {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.grille-3 {
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+/* ---------- badges & étiquettes ---------- */
+.badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
+  background: var(--rose-pale);
+  color: var(--chocolat);
+}
+
+.badge-attente { background: #fdeedd; color: #9c6b1f; }
+.badge-confirmee { background: #e4f0e4; color: #3e6b41; }
+.badge-terminee { background: #e8e4f5; color: #4a3d7c; }
+.badge-prete { background: #e4f0f5; color: #2f6076; }
+.badge-recuperee { background: #eee; color: #666; }
+
+.etiquette {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: var(--creme-fonce);
+  color: var(--chocolat-clair);
+  margin: 0.15rem 0.2rem 0.15rem 0;
+}
+
+/* ---------- formulaires ---------- */
+.champ {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 1.1rem;
+}
+
+.champ label {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.champ input,
+.champ select,
+.champ textarea {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  padding: 0.65rem 0.9rem;
+  border: 2px solid var(--rose-pale);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--chocolat);
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.champ input:focus,
+.champ select:focus,
+.champ textarea:focus {
+  border-color: var(--rose-fonce);
+}
+
+.message {
+  background: #e4f0e4;
+  color: #3e6b41;
+  border-radius: 12px;
+  padding: 0.8rem 1.1rem;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+}
+
+.message-alerte {
+  background: #fdeedd;
+  color: #9c6b1f;
+}
+
+/* ---------- navigation ---------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 248, 240, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 2px solid var(--rose-pale);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: 'Baloo 2', sans-serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--chocolat-fonce);
+}
+
+.logo .emoji {
+  font-size: 1.6rem;
+}
+
+.nav-liens {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.nav-liens a {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--chocolat);
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  transition: background 0.15s ease;
+}
+
+.nav-liens a:hover {
+  background: var(--rose-pale);
+}
+
+.nav-liens a.actif {
+  background: var(--rose-fonce);
+  color: #fff;
+}
+
+/* ---------- pied de page ---------- */
+.footer {
+  background: var(--chocolat);
+  color: var(--creme);
+  padding: 2.5rem 0;
+  margin-top: auto;
+}
+
+.footer a {
+  color: var(--rose);
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.footer h4 {
+  color: var(--rose);
+  margin-bottom: 0.5rem;
+}
+
+.footer-bas {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+/* ---------- héros accueil ---------- */
+.hero {
+  background: linear-gradient(135deg, var(--rose-pale), var(--creme) 55%, var(--creme-fonce));
+  border-radius: 28px;
+  padding: 3.5rem 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.hero .slogan {
+  font-size: 1.2rem;
+  color: var(--rose-fonce);
+  font-weight: 700;
+  margin: 0.75rem 0 1.25rem;
+}
+
+.hero .actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.section-titre {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.5rem;
+  margin: 2.5rem 0 1.25rem;
+}
+
+/* ---------- étapes ---------- */
+.etapes {
+  counter-reset: etape;
+}
+
+.etape {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.etape .numero {
+  flex-shrink: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  background: var(--rose-fonce);
+  color: #fff;
+  font-family: 'Baloo 2', sans-serif;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- boutique ---------- */
+.carte-gateau {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.15s ease;
+}
+
+.carte-gateau:hover {
+  transform: translateY(-4px);
+}
+
+.carte-gateau .visuel {
+  font-size: 3.2rem;
+  text-align: center;
+  background: var(--rose-pale);
+  border-radius: 14px;
+  padding: 1.2rem 0;
+}
+
+.carte-gateau .prix {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--rose-fonce);
+}
+
+.carte-gateau .rupture {
+  color: var(--rouge);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.allergenes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+/* ---------- panier ---------- */
+.panier-flottant {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 60;
+}
+
+.ligne-panier {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed var(--rose-pale);
+}
+
+.ligne-panier:last-child {
+  border-bottom: none;
+}
+
+/* ---------- tableaux admin ---------- */
+.tableau {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.tableau th {
+  text-align: left;
+  font-family: 'Baloo 2', sans-serif;
+  color: var(--chocolat-fonce);
+  padding: 0.6rem 0.75rem;
+  border-bottom: 2px solid var(--rose-pale);
+}
+
+.tableau td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--creme-fonce);
+  vertical-align: middle;
+}
+
+.tableau .actions-cell {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.stat {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.stat .valeur {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--rose-fonce);
+}
+
+.stat .libelle {
+  color: var(--chocolat-clair);
+  font-weight: 600;
+}
+
+/* ---------- calendrier ---------- */
+.calendrier {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.jour-dispo {
+  border: 2px solid var(--rose-pale);
+  border-radius: 14px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.jour-dispo:hover {
+  border-color: var(--rose-fonce);
+}
+
+.jour-dispo.choisi {
+  border-color: var(--rose-fonce);
+  background: var(--rose-pale);
+}
+
+.jour-dispo .date-label {
+  font-weight: 700;
+}
+
+.jour-dispo .heure-label {
+  color: var(--chocolat-clair);
+  font-size: 0.9rem;
+}
+
+/* ---------- onglets admin ---------- */
+.onglets {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.onglets button {
+  font-family: 'Baloo 2', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 2px solid var(--rose-pale);
+  background: #fff;
+  color: var(--chocolat);
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.onglets button.actif {
+  background: var(--chocolat);
+  color: var(--creme);
+  border-color: var(--chocolat);
+}
+
+/* ---------- divers ---------- */
+.prix-total {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--chocolat-fonce);
+}
+
+.sep {
+  border: none;
+  border-top: 2px dashed var(--rose-pale);
+  margin: 1.5rem 0;
+}
+
+.note {
+  font-size: 0.85rem;
+  color: var(--chocolat-clair);
+}
+
+@media (max-width: 640px) {
+  .navbar-inner {
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .tableau {
+    display: block;
+    overflow-x: auto;
+  }
+}
