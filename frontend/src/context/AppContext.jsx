@@ -46,7 +46,7 @@ export function AppProvider({ children }) {
       connexion: (nom, email) => maj(() => ({ eleve: { nom, email } })),
       deconnexion: () => maj(() => ({ eleve: null, panier: { lignes: [], mode: 'fin-de-seance' } })),
 
-      reserver: ({ matiereId, dureeId, creneauId, objectif }) =>
+      reserver: ({ matiereId, dureeId, niveau, typeSeance, creneauId, objectif }) =>
         maj((e) => {
           const creneau = e.creneaux.find((c) => c.id === creneauId)
           if (!creneau || creneau.places < 1) return {}
@@ -58,6 +58,8 @@ export function AppProvider({ children }) {
                 eleveNom: e.eleve ? e.eleve.nom : 'Élève invité',
                 matiereId,
                 dureeId,
+                niveau,
+                typeSeance,
                 creneauId,
                 date: creneau.date,
                 heure: creneau.heure,

@@ -11,9 +11,18 @@ export default function Footer() {
         <div>
           <h4>Navigation</h4>
           <p>
-            <Link to="/cours">Nos cours</Link><br />
+            <Link to="/services">Nos services</Link><br />
+            <Link to="/tarifs">Nos tarifs</Link><br />
             <Link to="/reserver">Réserver une séance</Link><br />
-            <Link to="/boutique">Boutique</Link>
+            <Link to="/gourmandises">Nos gourmandises</Link>
+          </p>
+        </div>
+        <div>
+          <h4>📍 Fréjus, Var</h4>
+          <p>
+            Séances à domicile, à la bibliothèque<br />
+            La Villa Marie.<br />
+            Paiement sur place, carte bancaire uniquement.
           </p>
         </div>
         <div>

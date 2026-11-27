@@ -60,6 +60,7 @@ export default function MesCommandes() {
                 </span>
                 <span className="prix-total">{c.total.toFixed(2).replace('.', ',')} €</span>
               </p>
+              <p className="note">💳 À régler sur place à la récupération, uniquement par carte bancaire.</p>
             </article>
           ))}
         </div>

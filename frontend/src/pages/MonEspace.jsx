@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
-import { matieres, durees, objectifsParMatiere, documents } from '../data/matieres'
+import { matieres, durees, objectifsParMatiere, documents, typesSeance } from '../data/matieres'
+import { niveaux } from '../data/tarifs'
 import { formaterDate } from '../data/disponibilites'
 import { useApp } from '../context/AppContext'
 
@@ -67,6 +68,10 @@ export default function MonEspace() {
                   </div>
                   <p className="note">
                     📆 {formaterDate(r.date)} à {r.heure} · ⏱️ {d.label}
+                  </p>
+                  <p className="note">
+                    {r.typeSeance === 'groupe' ? '👥 Petit groupe' : '👨‍🏫 Individuel'}
+                    {' '}· Niveau {niveaux.find((n) => n.id === r.niveau)?.label}
                   </p>
                   {r.objectif && <p className="note">🎯 Objectif : {r.objectif}</p>}
                   {r.statut === 'confirmée' && (
