@@ -1,7 +1,9 @@
 import { useState } from 'react'
-import { matieres, durees } from '../data/matieres'
+import { matieres, durees, typesSeance } from '../data/matieres'
+import { niveaux } from '../data/tarifs'
 import { formaterDate } from '../data/disponibilites'
 import { useApp } from '../context/AppContext'
+import AdminGate from './AdminGate'
 
 const badges = {
   'en attente': 'badge-attente',
@@ -67,6 +69,7 @@ export default function Admin() {
   }
 
   return (
+    <AdminGate>
     <div className="page container">
       <div className="entete-page">
         <h1>⚙️ Administration</h1>
@@ -140,7 +143,9 @@ export default function Admin() {
                   <tr key={r.id}>
                     <td><strong>{r.eleveNom}</strong><br /><span className="note">{r.objectif}</span></td>
                     <td>{matiereDe(r.matiereId)?.nom} · {dureeDe(r.dureeId)?.label}</td>
-                    <td>{formaterDate(r.date)}<br /><span className="note">{r.heure}</span></td>
+                    <td>{niveaux.find((n) => n.id === r.niveau)?.label || '—'}</td>
+                    <td>{typesSeance.find((t) => t.id === r.typeSeance)?.label || 'Individuel'}</td>
+                    <td>{formaterDate(r.date)}<br /><span className="note">{r.heure} · {r.lieu || 'Fréjus'}</span></td>
                     <td><span className={`badge ${badges[r.statut]}`}>{r.statut}</span></td>
                     <td>{r.commentaire || <span className="note">—</span>}</td>
                     <td className="actions-cell">
@@ -308,6 +313,7 @@ export default function Admin() {
           <h3 style={{ marginBottom: '1rem' }}>
             Commandes {commandesEnCours.length > 0 && <span className="badge badge-attente">{commandesEnCours.length} en cours</span>}
           </h3>
+          <p className="note">💳 Paiement encaissé sur place : carte bancaire (terminal) ou chèque.</p>
           {commandes.length === 0 ? (
             <p className="note">Aucune commande pour le moment.</p>
           ) : (
@@ -347,5 +353,6 @@ export default function Admin() {
         </div>
       )}
     </div>
+    </AdminGate>
   )
 }

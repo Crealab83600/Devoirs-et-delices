@@ -4,11 +4,14 @@ import { useApp } from '../context/AppContext'
 
 const liens = [
   { to: '/', label: 'Accueil' },
-  { to: '/cours', label: 'Nos cours' },
+  { to: '/services', label: 'Nos services' },
+  { to: '/matieres', label: 'Nos matières' },
+  { to: '/tarifs', label: 'Nos tarifs' },
   { to: '/reserver', label: 'Réserver' },
-  { to: '/boutique', label: 'Boutique' },
+  { to: '/gourmandises', label: 'Nos gourmandises' },
   { to: '/mes-commandes', label: 'Mes commandes' },
   { to: '/mon-espace', label: 'Mon espace' },
+  { to: '/apropos', label: 'À propos' },
   { to: '/contact', label: 'Contact' },
 ]
 

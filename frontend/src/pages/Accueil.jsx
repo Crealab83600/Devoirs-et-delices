@@ -20,8 +20,8 @@ export default function Accueil() {
         <p className="slogan">« Apprendre avec plaisir, savourer avec gourmandise ! »</p>
         <p>
           Deux univers réunis en une seule application : le <strong>soutien scolaire</strong> et la{' '}
-          <strong>pâtisserie faite maison</strong>. Vous réservez un cours particulier, vous progressez,
-          puis vous dégustez une gourmandise artisanale préparée avec soin.
+          <strong>pâtisserie faite maison</strong>. À Fréjus et dans tout le Var, vous réservez un cours
+          particulier, vous progressez, puis vous dégustez une gourmandise artisanale préparée avec soin.
         </p>
         <div className="actions">
           <Link to="/reserver" className="btn btn-primaire">📅 Réserver une séance</Link>
@@ -80,13 +80,32 @@ export default function Accueil() {
                 <h3>{m.emoji} {m.nom}</h3>
                 <p className="note">{m.description}</p>
                 <p style={{ marginTop: '0.5rem' }}>
-                  <strong>{m.tarifHoraire} € / heure</strong>
+                  <strong>À partir de 18 € / heure</strong> — <Link to="/tarifs">voir la grille des tarifs</Link>
                 </p>
               </div>
             ))}
           </div>
           <p style={{ textAlign: 'center', marginTop: '1.5rem' }}>
             <Link to="/cours" className="btn btn-primaire">Voir tous les cours et tarifs</Link>
+          </p>
+        </section>
+
+        <section>
+          <h2 className="section-titre">🎁 Nos offres du moment</h2>
+          <div className="grille grille-3">
+            {[
+              { emoji: '🎁', titre: 'Séance découverte', texte: 'Une première séance pour faire connaissance, sans engagement.' },
+              { emoji: '🤝', titre: 'Parrainage', texte: 'Une séance offerte pour le filleul, une réduction pour le parrain.' },
+              { emoji: '👨‍👩‍👧‍👦', titre: 'Forfait famille', texte: 'Tarif réduit dès le deuxième enfant de la fratrie.' },
+            ].map((o) => (
+              <div key={o.titre} className="carte">
+                <h3>{o.emoji} {o.titre}</h3>
+                <p className="note">{o.texte}</p>
+              </div>
+            ))}
+          </div>
+          <p style={{ textAlign: 'center', marginTop: '1.5rem' }}>
+            <Link to="/tarifs" className="btn btn-choco">Voir toutes les offres et tarifs</Link>
           </p>
         </section>
 

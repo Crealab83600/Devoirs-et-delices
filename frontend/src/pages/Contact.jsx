@@ -15,7 +15,7 @@ export default function Contact() {
     <div className="page container">
       <div className="entete-page">
         <h1>Contact</h1>
-        <p>Une question sur les cours, les pâtisseries ou une allergie particulière ? Écrivez-nous !</p>
+        <p>Une question sur les cours, les gourmandises ou une allergie particulière ? Écrivez-nous ou appelez-nous !</p>
       </div>
 
       <div className="grille grille-2">
@@ -54,16 +54,20 @@ export default function Contact() {
           <div className="carte" style={{ marginBottom: '1.5rem' }}>
             <h3>📍 Informations pratiques</h3>
             <ul className="note" style={{ paddingLeft: '1.2rem', marginTop: '0.5rem' }}>
-              <li>Cours à domicile ou en visio, selon vos préférences.</li>
+              <li>📍 Fréjus (Var) : séances à domicile ou à la bibliothèque La Villa Marie ; le dimanche, à la bibliothèque de Saint-Raphaël.</li>
+              <li>📞 Téléphone : <a href="tel:+33650021565">06 50 02 15 65</a></li>
+              <li>✉️ E-mail : <a href="mailto:raphaelmaury83600@gmail.com">raphaelmaury83600@gmail.com</a></li>
               <li>Séances du lundi au samedi, après l’école et le mercredi.</li>
-              <li>Pâtisseries à récupérer à la fin de la séance.</li>
+              <li>💳 Paiement sur place : carte bancaire (terminal) ou chèque.</li>
+              <li>Gourmandises à récupérer à la fin de la séance.</li>
+              <li>🔒 Aucune coordonnée bancaire ne circule sur ce site : le paiement se fait uniquement en personne.</li>
             </ul>
           </div>
           <div className="carte">
             <h3>⚠️ Allergies &amp; sécurité alimentaire</h3>
             <p className="note" style={{ marginTop: '0.5rem' }}>
-              Signalez-nous toute allergie : les allergènes de chaque pâtisserie sont indiqués dans la
-              boutique, et nous vous conseillerons les gourmandises adaptées. Pour les obligations
+              Signalez-nous toute allergie : les allergènes de chaque gourmandise sont indiqués sur la page
+              Nos gourmandises, et nous vous conseillerons les douceurs adaptées. Pour les obligations
               d’étiquetage et de déclaration d’activité alimentaire, consultez economie.gouv.fr.
             </p>
           </div>
